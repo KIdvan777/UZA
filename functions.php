@@ -119,6 +119,11 @@ add_action( 'widgets_init', 'uza_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+require get_template_directory() . '/inc/classes/uza-walker-nav-menu-class.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
 require get_template_directory() . '/inc/front/enqueue.php';
 
 /**
