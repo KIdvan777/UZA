@@ -19,16 +19,33 @@
 			<!-- Single Footer Widget -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<div class="single-footer-widget mb-80">
-					<!-- Widget Title -->
-					<h4 class="widget-title">Contact Us</h4>
+					<?php
+						if( is_active_sidebar('footer-1') ){
+							dynamic_sidebar('footer-1');
+						}
+					?>
+				</div>
+			</div>
 
-					<!-- Footer Content -->
-					<div class="footer-content mb-15">
-						<h3>(+65) 1234 5678</h3>
-						<p>40 Baria Sreet 13/2 NY City, US <br> hello.colorlib@gmail.com</p>
-					</div>
-					<p class="mb-0">Mon - Fri: 9:00 - 19:00 <br>
-						Closed on Weekends</p>
+			<!-- Single Footer Widget -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single-footer-widget mb-80">
+					<?php
+						if( is_active_sidebar('footer-2') ){
+							dynamic_sidebar('footer-2');
+						}
+					?>
+				</div>
+			</div>
+
+			<!-- Single Footer Widget -->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single-footer-widget mb-80">
+					<?php
+						if( is_active_sidebar('footer-3') ){
+							dynamic_sidebar('footer-3');
+						}
+					?>
 				</div>
 			</div>
 
@@ -36,44 +53,11 @@
 			<div class="col-12 col-sm-6 col-lg-3">
 				<div class="single-footer-widget mb-80">
 					<!-- Widget Title -->
-					<h4 class="widget-title">Quick Link</h4>
-
-					<!-- Nav -->
-					<nav>
-						<ul class="our-link">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Forum Registeration</a></li>
-							<li><a href="#">Forum Sign In</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-
-			<!-- Single Footer Widget -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="single-footer-widget mb-80">
-					<!-- Widget Title -->
-					<h4 class="widget-title">Resources</h4>
-
-					<!-- Nav -->
-					<nav>
-						<ul class="our-link">
-							<li><a href="#">Customer Support</a></li>
-							<li><a href="#">Privacy</a></li>
-							<li><a href="#">Media &amp; Press</a></li>
-							<li><a href="#">Our Team</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-
-			<!-- Single Footer Widget -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<div class="single-footer-widget mb-80">
-					<!-- Widget Title -->
+					<?php
+						if( is_active_sidebar('footer-4') ){
+							dynamic_sidebar('footer-4');
+						}
+					?>
 					<h4 class="widget-title">About Us</h4>
 					<p>Integer vehicula mauris libero, at molestie eros imperdiet sit amet.</p>
 

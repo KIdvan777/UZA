@@ -20,7 +20,7 @@
 
         <!-- Background Curve -->
         <div class="breadcrumb-bg-curve">
-            <img src="./img/core-img/curve-5.png" alt="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-5.png'; ?>" alt="">
         </div>
     </div>
     <!-- ***** Breadcrumb Area End ***** -->
@@ -52,7 +52,7 @@
                 foreach($portfolio_cats as $port_cat):
 
                     $args = array(
-                        'posts_per_page' => 2,
+                        'posts_per_page' => 3,
                         'post_type' => 'portfolio',
                         'portfolio_cat' => $port_cat->slug,
 
