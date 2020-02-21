@@ -1,4 +1,5 @@
 <?php get_header('uza'); ?>
+
 <!-- ***** Breadcrumb Area Start ***** -->
     <div class="breadcrumb-area">
         <div class="container h-100">
@@ -36,7 +37,7 @@
                 // pr($portfolio_tabs);
                     foreach($portfolio_tabs as $port_cat):
                         ?>
-                            <button class="btn active" data-filter="<?php echo '.' . $port_cat->slug; ?>"><?php echo $port_cat->name; ?></button>
+                            <button class="btn" data-filter="<?php echo '.' . $port_cat->slug; ?>"><?php echo $port_cat->name; ?></button>
                         <?
                     endforeach;
             ?>
@@ -47,135 +48,45 @@
 
                 <!-- Single Portfolio Item -->
                 <?php
-                
-                ?>
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets//img/bg-img/3.jpg';?>" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>UX/UI Design</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                $portfolio_cats = get_terms('portfolio_cat');
+                foreach($portfolio_cats as $port_cat):
 
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/9.jpg';?>" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Market Analytics</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    $args = array(
+                        'posts_per_page' => 2,
+                        'post_type' => 'portfolio',
+                        'portfolio_cat' => $port_cat->slug,
 
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/5.jpg';?>" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>UX/UI Design</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                    );
+                    $all = new WP_Query($args);
+                    // pr($design);
 
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/6.jpg';?>"
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Market Analytics</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item ux-ui-design">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/10.jpg';?>"
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>UX/UI Design</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item market-analytics">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/11.jpg';?>"
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Market Analytics</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item marketing-social">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/12.jpg';?>"
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Marketing Social</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Portfolio Item -->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item marketing-social">
-                    <div class="single-portfolio-slide">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/bg-img/4.jpg';?>"
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Marketing Social</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
+                    if($all->have_posts()){
+                        while( $all->have_posts() ){
+                            $all->the_post();
+                            ?>
+                            <!-- Single Portfolio Item -->
+                               <div class="col-12 col-sm-6 col-lg-4 col-xl-3 single-portfolio-item <?php echo $port_cat->slug; ?>">
+                                   <div class="single-portfolio-slide">
+                                       <?php the_post_thumbnail(); ?>
+                                       <!-- Overlay Effect -->
+                                       <div class="overlay-effect">
+                                           <h4><?php the_title(); ?></h4>
+                                           <p><?php the_content(); ?></p>
+                                       </div>
+                                       <!-- View More -->
+                                       <div class="view-more-btn">
+                                           <a href="<?php the_permalink();?>"><i class="arrow_right"></i></a>
+                                       </div>
+                                   </div>
+                               </div>
+                            <?
+                        }
+                    }else{
+                        ?>
+                            <p>No Posts</p>
+                        <?
+                    }wp_reset_postdata();
+                endforeach; ?>
             </div>
 
             <div class="row">
