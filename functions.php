@@ -36,6 +36,16 @@ require get_template_directory() . '/inc/classes/uza-walker-nav-menu-class.php';
 /**
  * Enqueue scripts and styles.
  */
+require get_template_directory() . '/inc/classes/uza-wp-widget-social-class.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
+require get_template_directory() . '/inc/classes/uza-wp-widget-info-class.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
 require get_template_directory() . '/inc/front/enqueue.php';
 
 /**
