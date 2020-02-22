@@ -10,7 +10,7 @@
       public function __construct() {
          $widget_options = array(
            'classname' => 'info_widget',
-           'description' => 'This is an Social Widget',
+           'description' => 'This is an Info Widget',
          );
          parent::__construct( 'info_widget', 'Info Widget', $widget_options );
        }
@@ -18,35 +18,19 @@
        public function widget( $args, $instance ) {
 
           $title = apply_filters( 'widget_title', $instance[ 'title' ] );
-          $description = apply_filters( 'widget_description', $instance[ 'description' ] );
-          $copyright = apply_filters( 'widget_copyright', $instance[ 'copyright' ] );
-          $copyright_link = apply_filters( 'widget_copyright_link', $instance[ 'copyright_link' ] );
-          $copyright_text = apply_filters( 'widget_copyright_text', $instance[ 'copyright_text' ] );
-          $facebook = apply_filters( 'widget_facebook', $instance[ 'facebook' ] );
-          $twitter = apply_filters( 'widget_twitter', $instance[ 'twitter' ] );
-          $pinterest = apply_filters( 'widget_pinterest', $instance[ 'pinterest' ] );
-          $instagram = apply_filters( 'widget_instagram', $instance[ 'instagram' ] );
-          $youtube = apply_filters( 'widget_youtube', $instance[ 'youtube' ] );
+          $phone_number = apply_filters( 'widget_phone_number', $instance[ 'phone_number' ] );
+          $address = apply_filters( 'widget_address', $instance[ 'address' ] );
+          $email = apply_filters( 'widget_email', $instance[ 'email' ] );
+          $work_time = apply_filters( 'widget_work_time', $instance[ 'work_time' ] );
+          $work_time_text = apply_filters( 'work_time_text', $instance[ 'work_time_text' ] );
 
           echo $args['before_widget'] . $args['before_title'] . $title . $args['after_title']; ?>
-          <!-- Widget Description -->
-          <p><?php echo $description; ?></p>
-          <!-- Widget Copyright -->
-          <div class="copywrite-text mb-30">
-              <p>&copy; <?php echo $copyright; ?> <a href="<?php echo $copyright_link; ?>"><?php echo $copyright_text; ?></a>.</p>
-          </div>
-          <!-- Widget Social Links -->
-          <div class="footer-social-info">
-              <a href="<?php echo $facebook; ?>" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-
-              <a href="<?php echo $twitter; ?>" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-
-              <a href="<?php echo $pinterest; ?>" class="pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-
-              <a href="<?php echo $instagram; ?>" class="instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
-
-              <a href="<?php echo $youtube; ?>" class="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-          </div>
+          <!-- Widget Info -->
+            <div class="footer-content mb-15">
+                <h3><?php echo $phone_number; ?></h3>
+                 <p><?php echo $address; ?><br> <?php echo $email; ?></p>
+            </div>
+            <p class="mb-0"><?php echo $work_time; ?> <br> <?php echo $work_time_text; ?></p>
 
           <?php echo $args['after_widget'];
 
@@ -55,66 +39,41 @@
         public function form( $instance ) {
 
           $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
-          $description = ! empty( $instance['description'] ) ? $instance['description'] : '';
-          $copyright = ! empty( $instance['copyright'] ) ? $instance['copyright'] : '';
-          $copyright_link = ! empty( $instance['copyright_link'] ) ? $instance['copyright_link'] : '';
-          $copyright_text = ! empty( $instance['copyright_text'] ) ? $instance['copyright_text'] : '';
-          $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : '';
-          $twitter = ! empty( $instance['twitter'] ) ? $instance['twitter'] : '';
-          $facebook = ! empty( $instance['facebook'] ) ? $instance['facebook'] : '';
-          $pinterest = ! empty( $instance['pinterest'] ) ? $instance['pinterest'] : '';
-          $instagram = ! empty( $instance['instagram'] ) ? $instance['instagram'] : '';
-          $youtube = ! empty( $instance['youtube'] ) ? $instance['youtube'] : '';
+          $phone_number = ! empty( $instance['phone_number'] ) ? $instance['phone_number'] : '';
+          $address = ! empty( $instance['address'] ) ? $instance['address'] : '';
+          $email = ! empty( $instance['email'] ) ? $instance['email'] : '';
+          $work_time = ! empty( $instance['work_time'] ) ? $instance['work_time'] : '';
+          $work_time_text = ! empty( $instance['work_time_text'] ) ? $instance['work_time_text'] : '';
           ?>
             <!-- Title -->
               <p>
                 <label for="<?php echo $this->get_field_id( 'title' ); ?>">Title:</label>
                 <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $title ); ?>" />
               </p>
-            <!-- Description -->
+            <!-- Phone Number -->
               <p>
-                <label for="<?php echo $this->get_field_id( 'description' ); ?>">Description:</label>
-                <input type="text" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" value="<?php echo esc_attr( $description ); ?>" />
+                <label for="<?php echo $this->get_field_id( 'phone_number' ); ?>">Phone Number:</label>
+                <input type="text" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'phone_number' ); ?>" value="<?php echo esc_attr( $phone_number ); ?>" />
               </p>
-            <!-- Copyright -->
+            <!-- Address -->
               <p>
-                <label for="<?php echo $this->get_field_id( 'copyright' ); ?>">Copyright:</label>
-                <input type="text" id="<?php echo $this->get_field_id( 'copyright' ); ?>" name="<?php echo $this->get_field_name( 'copyright' ); ?>" value="<?php echo esc_attr( $copyright ); ?>" />
+                <label for="<?php echo $this->get_field_id( 'address' ); ?>">Address:</label>
+                <input type="text" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" value="<?php echo esc_attr( $address ); ?>" />
               </p>
-            <!-- Copyright link-->
+            <!-- Email -->
                 <p>
-                  <label for="<?php echo $this->get_field_id( 'copyright_link' ); ?>">Copyright Link:</label>
-                  <input type="text" id="<?php echo $this->get_field_id( 'copyright_link' ); ?>" name="<?php echo $this->get_field_name( 'copyright_link' ); ?>" value="<?php echo esc_attr( $copyright_link ); ?>" />
+                  <label for="<?php echo $this->get_field_id( 'email' ); ?>">Email:</label>
+                  <input type="text" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" value="<?php echo esc_attr( $email ); ?>" />
                 </p>
-            <!-- Copyright Text-->
+            <!-- Work time -->
                 <p>
-                    <label for="<?php echo $this->get_field_id( 'copyright_text' ); ?>">Copyright Link:</label>
-                    <input type="text" id="<?php echo $this->get_field_id( 'copyright_text' ); ?>" name="<?php echo $this->get_field_name( 'copyright_text' ); ?>" value="<?php echo esc_attr( $copyright_text ); ?>" />
+                    <label for="<?php echo $this->get_field_id( 'copyright_text' ); ?>">Work time:</label>
+                    <input type="text" id="<?php echo $this->get_field_id( 'work_time' ); ?>" name="<?php echo $this->get_field_name( 'work_time' ); ?>" value="<?php echo esc_attr( $work_time ); ?>" />
                 </p>
-            <!-- Facebook -->
+            <!-- Work Time Text -->
             <p>
-              <label for="<?php echo $this->get_field_id( 'facebook' ); ?>">Facebook link:</label>
-              <input type="text" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" value="<?php echo esc_attr( $facebook ); ?>" />
-            </p>
-            <!-- Twitter -->
-            <p>
-              <label for="<?php echo $this->get_field_id( 'twitter' ); ?>">Twitter link:</label>
-              <input type="text" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>" value="<?php echo esc_attr( $twitter); ?>" />
-            </p>
-            <!-- Pinterest -->
-            <p>
-              <label for="<?php echo $this->get_field_id( 'pinterest' ); ?>">Pinterest link:</label>
-              <input type="text" id="<?php echo $this->get_field_id( 'pinterest' ); ?>" name="<?php echo $this->get_field_name( 'pinterest' ); ?>" value="<?php echo esc_attr( $pinterest); ?>" />
-            </p>
-            <!-- Instagram -->
-            <p>
-              <label for="<?php echo $this->get_field_id( 'instagram' ); ?>">Instagram link:</label>
-              <input type="text" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" value="<?php echo esc_attr( $instagram ); ?>" />
-            </p>
-            <!-- Youtube -->
-            <p>
-              <label for="<?php echo $this->get_field_id( 'youtube' ); ?>">Youtube link:</label>
-              <input type="text" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php echo $this->get_field_name( 'youtube' ); ?>" value="<?php echo esc_attr( $youtube ); ?>" />
+              <label for="<?php echo $this->get_field_id( 'work_time_text' ); ?>">Any text:</label>
+              <input type="text" id="<?php echo $this->get_field_id( 'work_time_text' ); ?>" name="<?php echo $this->get_field_name( 'work_time_text' ); ?>" value="<?php echo esc_attr( $work_time_text ); ?>" />
             </p>
 
           <?php
@@ -124,15 +83,11 @@
         public function update( $new_instance, $old_instance ) {
           $instance = $old_instance;
           $instance[ 'title' ] = strip_tags( $new_instance[ 'title' ] );
-          $instance[ 'description' ] = strip_tags( $new_instance[ 'description' ] );
-          $instance[ 'copyright' ] = strip_tags( $new_instance[ 'copyright' ] );
-          $instance[ 'copyright_link' ] = strip_tags( $new_instance[ 'copyright_link' ] );
-          $instance[ 'copyright_text' ] = strip_tags( $new_instance[ 'copyright_text' ] );
-          $instance[ 'facebook' ] = strip_tags( $new_instance[ 'facebook' ] );
-          $instance[ 'twitter' ] = strip_tags( $new_instance[ 'twitter' ] );
-          $instance[ 'pinterest' ] = strip_tags( $new_instance[ 'pinterest' ] );
-          $instance[ 'instagram' ] = strip_tags( $new_instance[ 'instagram' ] );
-          $instance[ 'youtube' ] = strip_tags( $new_instance[ 'youtube' ] );
+          $instance[ 'phone_number' ] = strip_tags( $new_instance[ 'phone_number' ] );
+          $instance[ 'address' ] = strip_tags( $new_instance[ 'address' ] );
+          $instance[ 'email' ] = strip_tags( $new_instance[ 'email' ] );
+          $instance[ 'work_time' ] = strip_tags( $new_instance[ 'work_time' ] );
+          $instance[ 'work_time_text' ] = strip_tags( $new_instance[ 'work_time_text' ] );
           return $instance;
         }
     }

@@ -58,22 +58,6 @@
 							dynamic_sidebar('footer-4');
 						}
 					?>
-					<!-- <h4 class="widget-title">About Us</h4>
-					<p>Integer vehicula mauris libero, at molestie eros imperdiet sit amet.</p> -->
-
-					<!-- Copywrite Text -->
-					<!-- <div class="copywrite-text mb-30">
-						<p>&copy; Copyright 2018 <a href="#">Colorlib</a>.</p>
-					</div> -->
-
-					<!-- Social Info -->
-					<!-- <div class="footer-social-info">
-						<a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-						<a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-						<a href="#" class="pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-						<a href="#" class="instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
-						<a href="#" class="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i class="fa fa-youtube-play"></i></a>
-					</div> -->
 				</div>
 			</div>
 
