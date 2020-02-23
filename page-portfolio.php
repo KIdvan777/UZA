@@ -1,28 +1,8 @@
 <?php get_header('uza'); ?>
 
 <!-- ***** Breadcrumb Area Start ***** -->
-    <div class="breadcrumb-area">
-        <div class="container h-100">
-            <div class="row h-100 align-items-end">
-                <div class="col-12">
-                    <div class="breadcumb--con">
-                        <h2 class="title">Portfolio</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Background Curve -->
-        <div class="breadcrumb-bg-curve">
-            <img src="<?php echo get_template_directory_uri() . '/assets/img/core-img/curve-5.png'; ?>" alt="">
-        </div>
-    </div>
+    
+    <?php get_template_part('template-parts/sections/breadcrumbs'); ?>
     <!-- ***** Breadcrumb Area End ***** -->
 
     <!-- ****** Gallery Area Start ****** -->
@@ -99,29 +79,6 @@
     <!-- ****** Gallery Area End ****** -->
 
     <!-- ***** Newsletter Area Start ***** -->
-    <section class="uza-newsletter-area">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <!-- Newsletter Content -->
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="nl-content mb-80">
-                        <h2>Subscribe to our Newsletter</h2>
-                        <p>Subscribe our newsletter gor get notification about new updates, etc...</p>
-                    </div>
-                </div>
-                <!-- Newsletter Form -->
-                <div class="col-12 col-md-6 col-lg-5">
-                    <div class="nl-form mb-80">
-                        <form action="#" method="post">
-                            <input type="email" name="nl-email" value="" placeholder="Your Email">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Border Bottom -->
-            <div class="border-line"></div>
-        </div>
-    </section>
+    <?php get_template_part('template-parts/sections/newsletter'); ?>
     <!-- ***** Newsletter Area End ***** -->
 <?php get_footer(); ?>

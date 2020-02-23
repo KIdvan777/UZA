@@ -1104,7 +1104,7 @@ input:focus {
   .uza-newsletter-area .nl-form form {
     position: relative;
     z-index: 1; }
-    .uza-newsletter-area .nl-form form input {
+    .uza-newsletter-area .nl-form form input[type="email"] {
       width: 100%;
       height: 50px;
       border-radius: 50px;
@@ -1112,7 +1112,7 @@ input:focus {
       border: none;
       font-size: 16px;
       padding: 0 30px; }
-    .uza-newsletter-area .nl-form form button {
+    .uza-newsletter-area .nl-form form button, input[type="submit"] {
       -webkit-transition-duration: 500ms;
       -o-transition-duration: 500ms;
       transition-duration: 500ms;
