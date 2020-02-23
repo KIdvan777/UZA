@@ -24,15 +24,23 @@ function uza_scripts() {
     wp_enqueue_style('uza-styles');
     wp_enqueue_style('uza-style', get_stylesheet_uri());
 
+    // Register uza
+    wp_register_script('uza-popper-js', get_template_directory_uri() . '/assets/js/popper.min.js', array('jquery'), '20151215', true);
+    wp_register_script('uza-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20151215', true);
+    wp_register_script('uza-bundle-js', get_template_directory_uri() . '/assets/js/uza.bundle.js', array('jquery'), '20151215', true);
+    wp_register_script('uza-active-js', get_template_directory_uri() . '/assets/js/default-assets/active.js', array('jquery'), '20151215', true);
+    wp_register_script('uza-custom-js', get_template_directory_uri() . '/assets/js/custom.js', array('jquery'), '20151215', true);
+
     // Enqueue scripts
-    wp_enqueue_script( 'uza-popper-js', get_template_directory_uri() . '/assets/js/popper.min.js', array('jquery'), '20151215', true );
-    wp_enqueue_script( 'uza-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '20151215', true );
-    wp_enqueue_script( 'uza-bundle-js', get_template_directory_uri() . '/assets/js/uza.bundle.js', array('jquery'), '20151215', true );
-    wp_enqueue_script( 'uza-active-js', get_template_directory_uri() . '/assets/js/default-assets/active.js', array('jquery'), '20151215', true );
+    wp_enqueue_script( 'uza-popper-js' );
+    wp_enqueue_script( 'uza-bootstrap-js' );
+    wp_enqueue_script( 'uza-bundle-js' );
+    wp_enqueue_script( 'uza-active-js' );
+    wp_enqueue_script( 'uza-custom-js' );
 
 	wp_enqueue_script( 'uza-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'uza-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'uza-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

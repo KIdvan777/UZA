@@ -18,6 +18,7 @@ function uza_portfolio_custom_post_type()
         'menu_position'   => 26,
         'menu_icon'       => 'dashicons-format-image',
         'supports'        => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats'),
+        'show_in_rest'    => true
     );
     register_post_type( 'portfolio', $args );
 

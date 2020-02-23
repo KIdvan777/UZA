@@ -1,7 +1,7 @@
 <?php get_header('uza'); ?>
 
 <!-- ***** Breadcrumb Area Start ***** -->
-    
+
     <?php get_template_part('template-parts/sections/breadcrumbs'); ?>
     <!-- ***** Breadcrumb Area End ***** -->
 
@@ -69,10 +69,11 @@
                 endforeach; ?>
             </div>
 
-            <div class="row">
-                <div class="col-12 text-center mt-30">
-                    <a href="#" class="btn uza-btn btn-3">Load More</a>
-                </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-30">
+                <a href="#" id="load_more_btn" class="btn uza-btn btn-3">Load More</a>
             </div>
         </div>
     </section>
