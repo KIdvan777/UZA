@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
     var portfolio = $('.container-fluid');
-    var uzaUrl = 'http://uza/wp-json/wp/v2/portfolio';
+    var uzaUrl = 'http://uza/wp-json/uza_rest/v1/portfolio';
 
     $('#load_more_btn').on('click', function(){
 
@@ -26,7 +26,6 @@ jQuery(document).ready(function($){
                     ).join('')}
                 </div>
                 `);
-
         });
     });
 });
