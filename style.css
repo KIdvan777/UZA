@@ -9,30 +9,23 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: uza
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
 uza is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /* *********************************************
 [Master Stylesheet]
-
 Template Name: Uza - Creative Agency HTML5 Template
 Template Author: Colorlib
 Template Author URL: http://colorlib.com
 Version: 1.0.0
 Last Update: Dec 31, 2018
-
 *********************************************
-
 [Tables of CSS Content]
-
 + body
     - 01.0 Reboot CSS
     - 02.0 Spacing CSS
@@ -56,7 +49,6 @@ Last Update: Dec 31, 2018
     - 20.0 Contact CSS
   ---------------------------------------------
   [Color Codes]
-
   $heading: #303030; [Heading Color]
   $text: #707070; [Text Color]
   $bg-gray: #e7f2fd; [Gray Background]
@@ -66,7 +58,6 @@ Last Update: Dec 31, 2018
   $border: #ebebeb; [Border Color]
   $hover: #1583e9; [Hover Color]
   $secondary: #a6a6a6; [Secondary Color]
-
   ---------------------------------------------
   [Font Family: 'HK Grotesk']
 --------------------------------------------- */

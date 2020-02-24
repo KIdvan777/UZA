@@ -66,11 +66,3 @@ assets/bower_components/*
 .idea/
 library/vendors/composer
 assets/img/.DS_Store
-
-# IMAGES #
-
-assets/img/*
-
-* CBR *
-
-includes/carbon-fields/*

@@ -31,6 +31,11 @@ require get_template_directory() . '/inc/post-types/portfolio.php';
 /**
  * Enqueue scripts and styles.
  */
+require get_template_directory() . '/inc/rest/portfolio-api.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
 require get_template_directory() . '/inc/classes/uza-walker-nav-menu-class.php';
 
 /**
